@@ -162,6 +162,21 @@ body::after {
   color: black;
 }
 
+.copy-btn-download {
+  background: none;
+  border: 1px solid var(--green);
+  color: var(--green);
+  font-family: inherit;
+  font-size: 0.7rem;
+  padding: 4px 6px;
+  cursor: pointer;
+}
+
+.copy-btn-download:hover {
+  background: var(--green);
+  color: black;
+}
+
 pre {
   margin: 0;
   white-space: pre-wrap;
@@ -236,7 +251,7 @@ NI/rQTVkd9HiFURCIOf0lT9paDZ7Dgo=
 
   <!-- DOWNLOAD BUTTON -->
   <div style="text-align:center;">
-    <button class="copy-btn" onclick="downloadASC()">
+    <button class="copy-btn-download" onclick="downloadASC()">
       DOWNLOAD PUBLIC KEY (.asc)
     </button>
   </div>
