@@ -31,19 +31,19 @@ II. LEGAL STATUS DECLARATION
 
 As of the date above, I affirm:
 
-- - I have not received any subpoena.
-- - I have not received any search warrant.
-- - I have not received any sealed court order.
-- - I have not received any national security letter.
-- - I have not received any FISA order.
-- - I am not subject to any gag order.
-- - I have not been served with any compelled decryption demand.
-- - I have not received any preservation request.
-- - I have not received any formal or informal request for user data.
-- - I have not been instructed to weaken encryption.
-- - I have not been compelled to introduce logging or monitoring capabilities.
-- - I am not operating under silent indictment, deferred prosecution,
-  or classified investigative constraint.
+I have not received any subpoena.
+I have not received any search warrant.
+I have not received any sealed court order.
+I have not received any national security letter.
+I have not received any FISA order.
+I am not subject to any gag order.
+I have not been served with any compelled decryption demand.
+I have not received any preservation request.
+I have not received any formal or informal request for user data.
+I have not been instructed to weaken encryption.
+I have not been compelled to introduce logging or monitoring capabilities.
+I am not operating under silent indictment, deferred prosecution,
+or classified investigative constraint.
 
 I am under no legal obligation preventing truthful publication
 of this statement.
@@ -52,24 +52,24 @@ of this statement.
 III. INFRASTRUCTURE & HARDWARE SOVEREIGNTY
 - ----------------------------------------------------------------
 
-- - I retain sole administrative control over hardware and systems I operate.
-- - No third party has been granted covert or undisclosed access.
-- - No lawful intercept mechanism has been installed with my knowledge.
-- - No firmware tampering has been disclosed to me.
-- - No hardware implants have been installed with my knowledge.
-- - No silent administrative accounts exist.
-- - No cryptographic backdoors have been introduced.
+I retain sole administrative control over hardware and systems I operate.
+No third party has been granted covert or undisclosed access.
+No lawful intercept mechanism has been installed with my knowledge.
+No firmware tampering has been disclosed to me.
+No hardware implants have been installed with my knowledge.
+No silent administrative accounts exist.
+No cryptographic backdoors have been introduced.
 
 - ----------------------------------------------------------------
 IV. CRYPTOGRAPHIC CUSTODY
 - ----------------------------------------------------------------
 
-- - All private cryptographic keys remain exclusively in my possession.
-- - No keys have been disclosed under compulsion.
-- - No escrow, split-key, or threshold recovery mechanism has been forced.
-- - No encrypted communications have been decrypted under legal compulsion.
-- - No authentication secrets have been surrendered.
-- - ALL hard drives are encrypted.
+All private cryptographic keys remain exclusively in my possession.
+No keys have been disclosed under compulsion.
+No escrow, split-key, or threshold recovery mechanism has been forced.
+No encrypted communications have been decrypted under legal compulsion.
+No authentication secrets have been surrendered.
+ALL hard drives are encrypted.
 
 Primary Public Key Fingerprint:
 4469 7B9E 9704 394D 2CAE 42E0 E94A 4FF8 75CE 8E2C
@@ -78,11 +78,11 @@ Primary Public Key Fingerprint:
 V. DATA DISCLOSURE STATUS
 - ----------------------------------------------------------------
 
-- - No mirrored forensic copies of my systems have been made
-  under legal authority without my knowledge.
-- - No privileged or confidential data has been surrendered
-  under coercion.
-- - No third party has been granted retrospective data access.
+No mirrored forensic copies of my systems have been made
+under legal authority without my knowledge.
+No privileged or confidential data has been surrendered
+under coercion.
+No third party has been granted retrospective data access.
 
 - ----------------------------------------------------------------
 VI. PERSONAL WELFARE & STABILITY DECLARATION
@@ -91,16 +91,16 @@ VI. PERSONAL WELFARE & STABILITY DECLARATION
 To eliminate ambiguity, narrative manipulation, or post-event
 reinterpretation:
 
-- - I am not suicidal.
-- - I am not under psychiatric duress.
-- - I have no known heart conditions.
-- - I am not in medical crisis.
-- - I do not consume alcohol.
-- - I do not use recreational, medical, or illicit drugs and never will
-  under any circumstances. Drugs are poison.
-- - My vehicle is mechanically sound and safe.
-- - I am not under blackmail, coercion, or credible threat.
-- - I am not acting under financial collapse or external pressure.
+I am not suicidal.
+I am not under psychiatric duress.
+I have no known heart conditions.
+I am not in medical crisis.
+I do not consume alcohol.
+I do not use recreational, medical, or illicit drugs and never will
+under any circumstances. Drugs are poison.
+My vehicle is mechanically sound and safe.
+I am not under blackmail, coercion, or credible threat.
+I am not acting under financial collapse or external pressure.
 
 Any future claim of suicide, overdose, sudden cardiac event,
 vehicular malfunction, unexplained disappearance, or similar
@@ -118,12 +118,12 @@ the Continuity Window. (TOP OF SIGNED MESSAGE)
 Readers should interpret any of the following as a potential
 indicator of compromise, coercion, or legal restraint:
 
-- - Failure to update within the Continuity Window.
-- - Removal of this document.
-- - Replacement with materially altered language.
-- - Unexpected signing key revocation.
-- - Public key fingerprint change without prior signed notice.
-- - Hosting seizure without signed migration statement.
+Failure to update within the Continuity Window.
+Removal of this document.
+Replacement with materially altered language.
+Unexpected signing key revocation.
+Public key fingerprint change without prior signed notice.
+Hosting seizure without signed migration statement.
 
 Absence is itself a signal.
 If this canary isn't updated within 2 days passed the continuity
@@ -135,10 +135,10 @@ VIII. PUBLICATION INTEGRITY
 
 For maximum integrity this document may be:
 
-- - Clear-signed via OpenPGP.
-- - Archived publicly.
-- - Timestamped.
-- - Anchored to public ledger hashes.
+Clear-signed via OpenPGP.
+Archived publicly.
+Timestamped.
+Anchored to public ledger hashes.
 
 - ----------------------------------------------------------------
 IX. AFFIRMATION
@@ -155,10 +155,10 @@ ALEC DAVIS
 27 February 2026
 
 LATEST BITCOIN BLOCK HASH:
-00000000000000000000128d78eda0f01f8edd1e6f3a5325ab71224c374caa3a
+000000000000000000003776c0a23d930d99a42ca4181eab3b4b5ac9aec12cfa
 
 LATEST MONERO BLOCK HASH:
-95e0cf827c8765cc56858f6fddf8caa0aa948206ca1f8ba29ec7fa865583a227
+6c06794b155899f1d447a112fe63acd3e5a92aecb3b21e83d587efd3c984ed9d
 
 - ----------------------------------------------------------------
 
@@ -183,8 +183,8 @@ EOlKT/h1zo4s0YMA/Rl5sqoVnrlKc+kq0wRlCg5VsG343TqKGlLtkvTH+pdSAP0b
 - -----END PGP PUBLIC KEY BLOCK-----
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARYKAB0WIQREaXuelwQ5TSyuQuDpSk/4dc6OLAUCaaH6/AAKCRDpSk/4dc6O
-LCZlAP49SYkh8yrzXMB6J3lxJ848b37vOUeaN61kvE/gAMYlrQD/WOs4S10FqDmb
-Ey9C6l5Y2aPQ30T1kMB057dc1tKD8wQ=
-=5idE
+iHUEARYKAB0WIQREaXuelwQ5TSyuQuDpSk/4dc6OLAUCaaH+pQAKCRDpSk/4dc6O
+LJIFAPwLLMSW7B9UA4JqBFvJP6SlO/BRGLDoSPKTm9SQgd1sXQD+IbYfS9oW2ykH
++Q2XlTOhnfnpGTp1WPKW6TVNNT9rZwM=
+=DfeK
 -----END PGP SIGNATURE-----
