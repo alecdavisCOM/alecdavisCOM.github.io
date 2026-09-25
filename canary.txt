@@ -4,16 +4,16 @@ Hash: SHA512
 STRATEGIC AUTONOMY, INFRASTRUCTURE CONTROL, 
 PERSONAL WELFARE & STABILITY DECLARATION, 
 AND WARRANT CANARY DECLARATION
-Version: 1.0
+Version: 1.2
 Last Manual Review: 25 September 2026
 Continuity Window: 30 Days
 Jurisdiction: United States
 Identity: ALEC DAVIS
-Website: https://www.alecdavis.com | https://www.alec.st
+Website: https://www.alecdavis.com | https://alec.st
 
-- ----------------------------------------------------------------
+- - ----------------------------------------------------------------
 I. PURPOSE
-- ----------------------------------------------------------------
+- - ----------------------------------------------------------------
 
 This document serves as a Personal Transparency Statement,
 Warrant Canary, Operational Sovereignty Declaration,
@@ -25,9 +25,9 @@ cryptographically inconsistent, or not updated within the
 Continuity Window, readers may reasonably infer that
 circumstances have changed.
 
-- ----------------------------------------------------------------
+- - ----------------------------------------------------------------
 II. LEGAL STATUS DECLARATION
-- ----------------------------------------------------------------
+- - ----------------------------------------------------------------
 
 As of the date above, I affirm:
 
@@ -48,9 +48,9 @@ or classified investigative constraint.
 I am under no legal obligation preventing truthful publication
 of this statement.
 
-- ----------------------------------------------------------------
+- - ----------------------------------------------------------------
 III. INFRASTRUCTURE & HARDWARE SOVEREIGNTY
-- ----------------------------------------------------------------
+- - ----------------------------------------------------------------
 
 I retain sole administrative control over hardware and systems I operate.
 No third party has been granted covert or undisclosed access.
@@ -60,9 +60,9 @@ No hardware implants have been installed with my knowledge.
 No silent administrative accounts exist.
 No cryptographic backdoors have been introduced.
 
-- ----------------------------------------------------------------
+- - ----------------------------------------------------------------
 IV. CRYPTOGRAPHIC CUSTODY
-- ----------------------------------------------------------------
+- - ----------------------------------------------------------------
 
 All private cryptographic keys remain exclusively in my possession.
 No keys have been disclosed under compulsion.
@@ -74,24 +74,23 @@ ALL hard drives are encrypted.
 Primary Public Key Fingerprint:
 4469 7B9E 9704 394D 2CAE 42E0 E94A 4FF8 75CE 8E2C
 
-- ----------------------------------------------------------------
+- - ----------------------------------------------------------------
 V. DATA DISCLOSURE STATUS
-- ----------------------------------------------------------------
+- - ----------------------------------------------------------------
 
 No mirrored forensic copies of my systems have been made
 under legal authority without my knowledge.
-No privileged or confidential data has been surrendered
-under coercion.
+No privileged or confidential data has been surrendered under coercion.
 No third party has been granted retrospective data access.
 
-- ----------------------------------------------------------------
+- - ----------------------------------------------------------------
 VI. PERSONAL WELFARE & STABILITY DECLARATION
-- ----------------------------------------------------------------
+- - ----------------------------------------------------------------
 
 To eliminate ambiguity, narrative manipulation, or post-event
 reinterpretation:
 
-I am not suicidal.
+I am not suicidal. Under NO circumstances will I EVER be suicidal.
 I am not under psychiatric duress.
 I have no known heart conditions.
 I am not in medical crisis.
@@ -108,9 +107,9 @@ incident should be considered inconsistent with this declaration
 unless independently verified through transparent evidence,
 and PRIVATE forensic pathologist.
 
-- ----------------------------------------------------------------
+- - ----------------------------------------------------------------
 VII. DEAD-MAN CONTINUITY CONDITIONS
-- ----------------------------------------------------------------
+- - ----------------------------------------------------------------
 
 This statement is manually reviewed and re-signed within
 the Continuity Window. (TOP OF SIGNED MESSAGE)
@@ -129,9 +128,9 @@ Absence is itself a signal.
 If this canary isn't updated within 2 days passed the continuity
 window ASSUME compromise, coercion, or legal restraint.
 
-- ----------------------------------------------------------------
+- - ----------------------------------------------------------------
 VIII. PUBLICATION INTEGRITY
-- ----------------------------------------------------------------
+- - ----------------------------------------------------------------
 
 For maximum integrity this document may be:
 
@@ -140,9 +139,9 @@ Archived publicly.
 Timestamped.
 Anchored to public ledger hashes.
 
-- ----------------------------------------------------------------
+- - ----------------------------------------------------------------
 IX. AFFIRMATION
-- ----------------------------------------------------------------
+- - ----------------------------------------------------------------
 
 I affirm that the above statements are true and accurate
 to the best of my knowledge as of the Last Manual Review date.
@@ -155,14 +154,14 @@ ALEC DAVIS
 25 September 2026
 
 LATEST BITCOIN BLOCK HASH:
-000000000000000000016156c7169208be506606635f8223e87c9197ac3d59e2
+000000000000000000009d3148ebc1566e982e201e2abfd4f66a6b8a2fe43b6d
 
 LATEST MONERO BLOCK HASH:
-1df68fea899ad42297f3aa692ee4d943d68bb1eabd3af4bc088882fc39e3db47
+0ee6db88465bee04c7f3aaeed84fa8fa6e039707bc30a7fc6a30ee3484c5ba79
 
-- ----------------------------------------------------------------
+- - ----------------------------------------------------------------
 
-- -----BEGIN PGP PUBLIC KEY BLOCK-----
+- - -----BEGIN PGP PUBLIC KEY BLOCK-----
 Comment: User ID:	Alec Davis <alec@alecdavis.com>
 Comment: Valid from:	1/16/2026 9:06 PM
 Comment: Type:	255-bit EdDSA (secret key available)
@@ -180,12 +179,12 @@ cQMBCAeIeAQYFgoAIBYhBERpe56XBDlNLK5C4OlKT/h1zo4sBQJpau6dAhsMAAoJ
 EOlKT/h1zo4s0YMA/Rl5sqoVnrlKc+kq0wRlCg5VsG343TqKGlLtkvTH+pdSAP0b
 3jfMryOzunZdx8G/0xCL5ao7tUIR/GcGFPh5AnUaDA==
 =XDrY
-- -----END PGP PUBLIC KEY BLOCK-----
+- - -----END PGP PUBLIC KEY BLOCK-----
 -----BEGIN PGP SIGNATURE-----
 
-iJEEARYKADkWIQREaXuelwQ5TSyuQuDpSk/4dc6OLAUCarazjBsUgAAAAAAEAA5t
-YW51MiwyLjUrMS4xMiwyLDEACgkQ6UpP+HXOjiwP/gEAlRin/viKmXIS9Oln+WG6
-5erj8iOHDRPdo3XWf7QkYD8A/20HXI0hPI9ZqcbSl2iWl/O/LKy+c5zGoy9Bst6T
-gokK
-=sA4A
+iJEEARYKADkWIQREaXuelwQ5TSyuQuDpSk/4dc6OLAUCara5sBsUgAAAAAAEAA5t
+YW51MiwyLjUrMS4xMiwyLDEACgkQ6UpP+HXOjiy2WAEA81fts8XFcUGSieHfpAwU
+aIOIoFRiIpQltSwQx8H+droBAIL4jxB57u4dbSIsxs9On2Jfe6ZIescc83wdQEjA
+mwYG
+=uovd
 -----END PGP SIGNATURE-----
