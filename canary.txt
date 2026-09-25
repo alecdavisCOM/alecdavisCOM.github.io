@@ -4,12 +4,12 @@ Hash: SHA512
 STRATEGIC AUTONOMY, INFRASTRUCTURE CONTROL, 
 PERSONAL WELFARE & STABILITY DECLARATION, 
 AND WARRANT CANARY DECLARATION
-Version: 1.1
-Last Manual Review: 24 April 2026
+Version: 1.0
+Last Manual Review: 25 September 2026
 Continuity Window: 30 Days
 Jurisdiction: United States
 Identity: ALEC DAVIS
-Website: https://www.alecdavis.com
+Website: https://www.alecdavis.com | https://www.alec.st
 
 - ----------------------------------------------------------------
 I. PURPOSE
@@ -91,7 +91,7 @@ VI. PERSONAL WELFARE & STABILITY DECLARATION
 To eliminate ambiguity, narrative manipulation, or post-event
 reinterpretation:
 
-I am not suicidal. Under NO circumstances will I EVER be suicidal.
+I am not suicidal.
 I am not under psychiatric duress.
 I have no known heart conditions.
 I am not in medical crisis.
@@ -152,13 +152,13 @@ This declaration is made voluntarily and without coercion.
 Signed,
 
 ALEC DAVIS
-24 April 2026
+25 September 2026
 
 LATEST BITCOIN BLOCK HASH:
-000000000000000000008c141a4c4a35559855e52a615d13f27ca220cb171218
+000000000000000000016156c7169208be506606635f8223e87c9197ac3d59e2
 
 LATEST MONERO BLOCK HASH:
-2f7fcfa97e2f3bfcb10c7e9d021afa5c87fe23b1b514d235785f8394ac3d8827
+1df68fea899ad42297f3aa692ee4d943d68bb1eabd3af4bc088882fc39e3db47
 
 - ----------------------------------------------------------------
 
@@ -183,8 +183,9 @@ EOlKT/h1zo4s0YMA/Rl5sqoVnrlKc+kq0wRlCg5VsG343TqKGlLtkvTH+pdSAP0b
 - -----END PGP PUBLIC KEY BLOCK-----
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARYKAB0WIQREaXuelwQ5TSyuQuDpSk/4dc6OLAUCaetgfQAKCRDpSk/4dc6O
-LEFSAP9P9wNA/+hiXFVSetmz7+E4fmRjqDiI7fIjWhBxoD6EpAEAuNZFAj1QGKXw
-xzGm8Re36hjK9ydhBJe0vLmn8I2DqwE=
-=3iHM
+iJEEARYKADkWIQREaXuelwQ5TSyuQuDpSk/4dc6OLAUCarazjBsUgAAAAAAEAA5t
+YW51MiwyLjUrMS4xMiwyLDEACgkQ6UpP+HXOjiwP/gEAlRin/viKmXIS9Oln+WG6
+5erj8iOHDRPdo3XWf7QkYD8A/20HXI0hPI9ZqcbSl2iWl/O/LKy+c5zGoy9Bst6T
+gokK
+=sA4A
 -----END PGP SIGNATURE-----
