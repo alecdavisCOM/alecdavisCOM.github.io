@@ -5,7 +5,7 @@ STRATEGIC AUTONOMY, INFRASTRUCTURE CONTROL,
 PERSONAL WELFARE & STABILITY DECLARATION, 
 AND WARRANT CANARY DECLARATION
 Version: 1.2
-Last Manual Review: 25 September 2026
+Last Manual Review: 5 November 2026
 Continuity Window: 30 Days
 Jurisdiction: United States
 Identity: ALEC DAVIS
@@ -151,13 +151,13 @@ This declaration is made voluntarily and without coercion.
 Signed,
 
 ALEC DAVIS
-25 September 2026
+5 November 2026
 
 LATEST BITCOIN BLOCK HASH:
-000000000000000000009d3148ebc1566e982e201e2abfd4f66a6b8a2fe43b6d
+e80477be6a341d104f572e4590dded010e219933cdbd91197c92d1bedf68a469
 
 LATEST MONERO BLOCK HASH:
-0ee6db88465bee04c7f3aaeed84fa8fa6e039707bc30a7fc6a30ee3484c5ba79
+54682b0d523dbef7de991de696931d0bd5467d9aafa46b8223f2aef80813a1f7
 
 - - ----------------------------------------------------------------
 
@@ -182,9 +182,9 @@ EOlKT/h1zo4s0YMA/Rl5sqoVnrlKc+kq0wRlCg5VsG343TqKGlLtkvTH+pdSAP0b
 - - -----END PGP PUBLIC KEY BLOCK-----
 -----BEGIN PGP SIGNATURE-----
 
-iJEEARYKADkWIQREaXuelwQ5TSyuQuDpSk/4dc6OLAUCara5sBsUgAAAAAAEAA5t
-YW51MiwyLjUrMS4xMiwyLDEACgkQ6UpP+HXOjiy2WAEA81fts8XFcUGSieHfpAwU
-aIOIoFRiIpQltSwQx8H+droBAIL4jxB57u4dbSIsxs9On2Jfe6ZIescc83wdQEjA
-mwYG
-=uovd
+iJEEARYKADkWIQREaXuelwQ5TSyuQuDpSk/4dc6OLAUCau06CRsUgAAAAAAEAA5t
+YW51MiwyLjUrMS4xMiwyLDEACgkQ6UpP+HXOjizbGAD/VJi09CPcrTnjqyE/Nbva
+CQpL9HuQ69DQ0dTx1RlwW18A+wWWI9mNU8ak843pZbwue4ILfDvs2VT4npEIM6Mc
+498I
+=Yrwo
 -----END PGP SIGNATURE-----
