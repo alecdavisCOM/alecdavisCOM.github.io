@@ -107,6 +107,22 @@ kbd{font:800 14px "Barlow Condensed";background:#fff;border:2px solid var(--ink)
 #stinkfx{position:fixed;inset:0;pointer-events:none;opacity:0;box-shadow:inset 0 0 90px 10px rgba(120,190,40,.35)}
 #stinkfx.on{animation:gas 2.6s ease-out forwards}
 @keyframes gas{0%{opacity:0}10%{opacity:.8}100%{opacity:0}}
+/* native 2x2 panel on the start screen (desktop) */
+.native{position:absolute;right:4vw;top:50%;transform:translateY(-50%);width:clamp(300px,32vw,480px);max-height:calc(100% - 40px);overflow:hidden;background:rgba(14,12,20,.72);border-radius:14px;padding:10px 12px 12px;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 2px rgba(255,194,26,.5)}
+.native small{display:block;text-align:center;font:700 10px "Barlow Condensed",sans-serif;letter-spacing:.18em;color:rgba(255,255,255,.65);margin-bottom:6px}
+.native .ph{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.native .ph div{aspect-ratio:4/3.4;border:2px dashed rgba(255,255,255,.45);border-radius:6px;display:grid;place-items:center;color:#fff;font:700 14px "Barlow Condensed"}
+/* ad slot on the game-over / pause / start screens */
+.adslot{display:flex;flex-direction:column;align-items:center;gap:4px;flex:none}
+.adslot small{font:700 10px "Barlow Condensed",sans-serif;letter-spacing:.18em;color:rgba(255,255,255,.65)}
+.adframe{background:rgba(0,0,0,.25);border-radius:4px;overflow:hidden;line-height:0}
+.adframe iframe{border:0;display:block}
+.adframe .ph{display:grid;place-items:center;width:100%;height:100%;border:2px dashed rgba(255,255,255,.5);color:#fff;font:700 16px "Barlow Condensed";line-height:1}
+.screen.ad-side{gap:28px}
+.screen.ad-below{flex-direction:column;gap:26px;justify-content:center}
+.screen.ad-bottom{padding-bottom:78px}
+body.ad-low #muteBtn{display:none}
+.screen.ad-bottom .adslot{position:fixed;left:50%;bottom:max(8px,env(safe-area-inset-bottom));transform:translateX(-50%)}
 #nogl .card{padding:24px;text-align:center;font-size:20px}
 </style>
 </head>
@@ -136,6 +152,7 @@ kbd{font:800 14px "Barlow Condensed";background:#fff;border:2px solid var(--ink)
 </div>
 
 <div id="title" class="screen dim">
+  <div class="native hidden" id="nativeAd"><small>ADVERTISEMENT</small><div class="nbox" id="nativeBox"></div></div>
   <div class="card">
     <div class="top"></div><div class="hazard"></div>
     <div class="in">
@@ -180,7 +197,58 @@ kbd{font:800 14px "Barlow Condensed";background:#fff;border:2px solid var(--ink)
       <div class="row"><button class="btn ghost" id="menuBtn">MENU</button><button class="btn" id="againBtn">RUN AGAIN</button></div>
     </div>
   </div>
+  <div class="adslot hidden" id="adSlot"><small>ADVERTISEMENT</small><div class="adframe" id="adFrame"></div></div>
 </div>
+
+<!-- =====================================================================
+     ADS (Adsterra)
+     Paste each Adsterra banner code INSIDE the matching <template> tag,
+     exactly as Adsterra gives it (both <script> tags). Example:
+
+     <template id="ad-SIZE">
+       <script type="text/javascript">
+         atOptions = { 'key' : 'YOUR_KEY', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
+       </script>
+       <script type="text/javascript" src="//www.highperformanceformat.com/YOUR_KEY/invoke.js"></script>
+     </template>
+
+     300x250 = start screen on tall phones/tablets (under the card)
+               game over: beside the card on desktop, under it on taller phones/tablets
+               pause ("On Break"): under the card on desktop and most phones
+     320x50  = smaller screens where 300x250 won't fit (pinned to the bottom)
+     Leave a template empty to turn that size off.  Add #adpreview to the
+     page URL to see grey placeholder boxes where the ads will go.
+
+     NATIVE BANNER (start screen, desktop): in Adsterra pick "Native Banner",
+     widget layout 2:2, then paste its code (one <script> + one <div>) inside
+     <template id="ad-native">.  On phones the start screen uses the
+     320x50 / 300x250 codes below instead.
+     ===================================================================== -->
+<template id="ad-native"><script async="async" data-cfasync="false" src="https://bicea.org/21/fed509844dff5200ac1308445589218a"></script>
+<div id="container-fed509844dff5200ac1308445589218a"></div>
+</template>
+<template id="ad-300x250"><script>
+  atOptions = {
+    'key' : 'a130b962cd4bfe2f5a509373c2bd47d2',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://bicea.org/22/a130b962cd4bfe2f5a509373c2bd47d2"></script>
+</template>
+<template id="ad-320x50"><script>
+  atOptions = {
+    'key' : 'd2bc9e0d71a162ce299e81620f8f9f25',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://bicea.org/22/d2bc9e0d71a162ce299e81620f8f9f25"></script>
+</template>
 
 <div id="nogl" class="screen hidden"><div class="card">Your browser doesn't support WebGL2, which this game needs. Try a recent Chrome, Edge, Firefox or Safari.</div></div>
 
@@ -1481,6 +1549,7 @@ function buildScenery(seg, plan, k) {
   $('bestTitle').textContent = Math.floor(G.best).toLocaleString();
 
   function startRun() {
+    hideAd();
     Snd.init(); Snd.music(true);
     if (G.state !== 'title') resetWorld();
     G.titleCam = { pos: G.camPos.slice(), look: G.camLook.slice() };
@@ -1500,11 +1569,65 @@ function buildScenery(seg, plan, k) {
     $('oCause').textContent = ({ crash: 'Face-planted into the hardware.', fall: 'Took the express route down.', caught: 'Flattened by the steamroller.' })[G.cause] || '';
     $('bestTitle').textContent = Math.floor(G.best).toLocaleString();
     showScreen('over');
+    showAd();
   }
-  function toTitle() { G.state = 'title'; resetWorld(); man.setExpr('neutral'); G.camBlend = 1; showScreen('title'); ui.hud.classList.add('hidden'); }
+  // ---------- ads on the game-over screen ----------
+  const AD = { sizes: { '300x250': [300, 250], '320x50': [320, 50] }, lastLoad: 0, lastSize: '', mode: '' };
+  const adCode = sz => { const t = document.getElementById('ad-' + sz); return t ? t.innerHTML.trim() : ''; };
+  const adPreview = () => location.hash === '#adpreview';
+  function showAd(scr = ui.over) {
+    const over = scr, slot = $('adSlot'), frame = $('adFrame'), card = over.querySelector('.card');
+    for (const s of [ui.over, ui.pause, ui.title]) s.classList.remove('ad-side', 'ad-below', 'ad-bottom');
+    document.body.classList.remove('ad-low'); G.adSide = false;
+    if (slot.parentNode !== over) over.appendChild(slot);
+    const sideOK = over === ui.over;
+    $('nativeAd').classList.add('hidden'); G.nativeOn = false;
+    const has = sz => !!adCode(sz) || adPreview();
+    const W = innerWidth, H = innerHeight, cw = card.offsetWidth, ch = card.offsetHeight;
+    const leftPad = (W >= 900 && H >= 560) ? W * .07 : (W - cw) / 2;
+    let mode = '', size = '';
+    if (sideOK && has('300x250') && W >= 900 && W - (leftPad + cw) >= 360 && H >= 300) { mode = 'side'; size = '300x250'; }
+    else if (has('300x250') && H >= ch + 250 + 18 + 16 + 30) { mode = 'below'; size = '300x250'; }
+    else if (has('320x50') && W >= 330 && H >= ch + 50 + 18 + 44) { mode = 'bottom'; size = '320x50'; }
+    if (!mode) { slot.classList.add('hidden'); return; }
+    over.classList.add('ad-' + mode); slot.classList.remove('hidden'); G.adSide = mode === 'side';
+    if (mode !== 'side') document.body.classList.add('ad-low');
+    const [w, h] = AD.sizes[size];
+    frame.style.width = w + 'px'; frame.style.height = h + 'px';
+    // refresh the ad at most every 20 seconds (quick retries keep the same ad)
+    const now = performance.now();
+    if (frame.firstChild && size === AD.lastSize && now - AD.lastLoad < 20000) return;
+    AD.lastLoad = now; AD.lastSize = size; frame.innerHTML = '';
+    const code = adCode(size);
+    if (!code) { frame.innerHTML = `<div class="ph">AD ${w}×${h}</div>`; return; }
+    const f = document.createElement('iframe');
+    f.width = w; f.height = h; f.scrolling = 'no'; f.title = 'Advertisement';
+    f.srcdoc = `<!DOCTYPE html><html><head><meta charset="utf-8"><style>html,body{margin:0;padding:0;overflow:hidden;background:transparent}</style></head><body>${code}</body></html>`;
+    frame.appendChild(f);
+  }
+  function hideAd() { $('adSlot').classList.add('hidden'); $('nativeAd').classList.add('hidden'); G.adSide = false; G.nativeOn = false; document.body.classList.remove('ad-low'); for (const s of [ui.over, ui.pause, ui.title]) s.classList.remove('ad-side', 'ad-below', 'ad-bottom'); }
+  // Adsterra native banner (2x2) on the start screen, desktop only. Injected once, then just shown/hidden.
+  let nativeLoaded = false;
+  function injectHTML(el, html) {
+    const tmp = document.createElement('div'); tmp.innerHTML = html;
+    for (const n of [...tmp.childNodes]) {
+      if (n.nodeName === 'SCRIPT') { const s = document.createElement('script'); for (const a of n.attributes) s.setAttribute(a.name, a.value); s.text = n.text; el.appendChild(s); }
+      else el.appendChild(n);
+    }
+  }
+  function showTitleAds() {
+    const W = innerWidth, H = innerHeight, code = adCode('native');
+    if (W >= 900 && H >= 560 && (code || adPreview())) {
+      hideAd();
+      const box = $('nativeBox');
+      if (!nativeLoaded) { nativeLoaded = true; if (code) injectHTML(box, code); else box.innerHTML = '<div class="ph"><div>AD</div><div>AD</div><div>AD</div><div>AD</div></div>'; }
+      $('nativeAd').classList.remove('hidden'); G.nativeOn = true;
+    } else showAd(ui.title);
+  }
+  function toTitle() { G.state = 'title'; resetWorld(); man.setExpr('neutral'); G.camBlend = 1; hideAd(); showScreen('title'); showTitleAds(); ui.hud.classList.add('hidden'); }
   function setPause(on) {
-    if (on && G.state === 'run') { G.state = 'paused'; Snd.music(false); showScreen('pause'); }
-    else if (!on && G.state === 'paused') { G.state = 'run'; Snd.music(true); showScreen(null); ui.hud.classList.remove('hidden'); last = performance.now(); }
+    if (on && G.state === 'run') { G.state = 'paused'; Snd.music(false); showScreen('pause'); showAd(ui.pause); }
+    else if (!on && G.state === 'paused') { hideAd(); G.state = 'run'; Snd.music(true); showScreen(null); ui.hud.classList.remove('hidden'); last = performance.now(); }
   }
   $('playBtn').onclick = startRun; $('againBtn').onclick = startRun; $('menuBtn').onclick = toTitle;
   $('resumeBtn').onclick = () => setPause(false); $('quitBtn').onclick = () => { setPause(false); toTitle(); };
@@ -1727,8 +1850,10 @@ function buildScenery(seg, plan, k) {
     const pw = segPoint(S, p.s, p.lat);
     if (G.state === 'title') {
       const f = [S.d[0], S.d[2]], r = [S.r[0], S.r[2]], sw = Math.sin(G.time * .35) * .5;
-      G.camPos = [pw[0] + f[0] * 4.2 + r[0] * (1.1 + sw), 2.3, pw[1] + f[1] * 4.2 + r[1] * (1.1 + sw)];
-      G.camLook = [pw[0] + r[0] * .55, 1.75, pw[1] + r[1] * .55];
+      const fd = G.nativeOn ? 5.2 : 4.2, lk = G.nativeOn ? .3 : .55; // keep Nate between the card and the ad panel
+      G.tcam = { fd, lk };
+      G.camPos = [pw[0] + f[0] * fd + r[0] * (1.1 + sw), G.nativeOn ? 2.5 : 2.3, pw[1] + f[1] * fd + r[1] * (1.1 + sw)];
+      G.camLook = [pw[0] + r[0] * lk, 1.75, pw[1] + r[1] * lk];
       return;
     }
     if (G.state === 'run' || G.state === 'paused' || (G.state === 'dying' && G.cause !== 'fall' && G.deathT < .05)) {
@@ -1739,8 +1864,9 @@ function buildScenery(seg, plan, k) {
       let pos = [b[0] - fx * 7.4, 4.35 + p.y * .45, b[1] - fz * 7.4], look = [b[0] + fx * 5, 1.25 + p.y * .6, b[1] + fz * 5];
       if (G.camBlend < 1) {
         G.camBlend = Math.min(1, G.camBlend + dt / 1.3); const k = G.camBlend * G.camBlend * (3 - 2 * G.camBlend);
-        const tp = [pw[0] + S.d[0] * 4.2 + S.r[0] * 1.1, 2.3, pw[1] + S.d[2] * 4.2 + S.r[2] * 1.1];
-        const tl = [pw[0] + S.r[0] * .55, 1.75, pw[1] + S.r[2] * .55];
+        const tc = G.tcam || { fd: 4.2, lk: .55 };
+        const tp = [pw[0] + S.d[0] * tc.fd + S.r[0] * 1.1, 2.3, pw[1] + S.d[2] * tc.fd + S.r[2] * 1.1];
+        const tl = [pw[0] + S.r[0] * tc.lk, 1.75, pw[1] + S.r[2] * tc.lk];
         const a0 = Math.atan2(tp[0] - pw[0], tp[2] - pw[1]), a1 = Math.atan2(pos[0] - pw[0], pos[2] - pw[1]);
         const r0 = Math.hypot(tp[0] - pw[0], tp[2] - pw[1]), r1 = Math.hypot(pos[0] - pw[0], pos[2] - pw[1]);
         const a = a0 + (((a1 - a0 + Math.PI) % TAU + TAU) % TAU - Math.PI) * k;
@@ -1758,7 +1884,12 @@ function buildScenery(seg, plan, k) {
         const tp = G.cause === 'caught' ? [pw[0] + f[0] * 2.5 + r[0] * 5.5, 5.8, pw[1] + f[1] * 2.5 + r[1] * 5.5]
           : [pw[0] + f[0] * 4.8 + r[0] * 2.2, 2.6, pw[1] + f[1] * 4.8 + r[1] * 2.2];
         G.camPos = G.camPos.map((v, i) => damp(v, tp[i], 2.2, dt));
-        G.camLook = G.camLook.map((v, i) => damp(v, [pw[0], G.cause === 'caught' ? .4 : 1.0, pw[1]][i], 3, dt));
+        let lk = [pw[0], G.cause === 'caught' ? .4 : 1.0, pw[1]];
+        if (G.adSide && G.state === 'over') { // shift Nate toward the right edge so the ad doesn't cover him
+          const dx = lk[0] - G.camPos[0], dz = lk[2] - G.camPos[2], l = Math.hypot(dx, dz) || 1;
+          lk = [lk[0] + dz / l * 3.2, lk[1], lk[2] - dx / l * 3.2];
+        }
+        G.camLook = G.camLook.map((v, i) => damp(v, lk[i], 3, dt));
       }
     }
   }
@@ -1918,7 +2049,11 @@ function buildScenery(seg, plan, k) {
     else goodSecs = 0;
   }
   addEventListener('resize', resize); resize();
-  resetWorld(); showScreen('title');
+  resetWorld(); showScreen('title'); showTitleAds();
+  let adResizeT = 0;
+  addEventListener('resize', () => { clearTimeout(adResizeT); adResizeT = setTimeout(() => {
+    if (G.state === 'title') showTitleAds(); else if (G.state === 'over') showAd(ui.over); else if (G.state === 'paused') showAd(ui.pause);
+  }, 200); });
 
   function logic(dt) {
     if (G.state !== 'paused') {
