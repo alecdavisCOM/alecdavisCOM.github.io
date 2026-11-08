@@ -1,0 +1,15 @@
+# robots.txt for alecdavis.com
+User-agent: *
+Allow: /
+Disallow: /_build/
+Disallow: /scratch_
+Disallow: /*.py$
+
+# Major engines explicitly welcome
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://alecdavis.com/sitemap.xml

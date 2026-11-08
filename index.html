@@ -1,320 +1,363 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="no-js">
 <head>
-<meta name="format-detection" content="telephone=no,email=no,address=no,date=no">
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Alec Davis</title>
-
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-<link rel="shortcut icon" href="img/favicon.ico">
-
-<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-
-<link rel="manifest" href="img/site.webmanifest">
-
-<style>
-:root {
-  --green: #00ff66;
-  --bg: #000;
-}
-
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--green);
-  font-family: "Courier New", monospace;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-/* CRT Scanlines */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(255,255,255,0.03),
-    rgba(255,255,255,0.03) 1px,
-    transparent 1px,
-    transparent 3px
-  );
-  pointer-events: none;
-  animation: scanlines 6s linear infinite;
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.15);
-  pointer-events: none;
-  animation: flicker 4s infinite;
-}
-
-@keyframes scanlines {
-  from { background-position: 0 0; }
-  to { background-position: 0 100%; }
-}
-
-@keyframes flicker {
-  0%,100% { opacity: 0.15; }
-  95% { opacity: 0.3; }
-  97% { opacity: 0.05; }
-}
-
-.container {
-  text-align: center;
-  padding: 2rem;
-  max-width: 720px;
-}
-
-/* Profile Glitch */
-.profile-wrapper {
-  position: relative;
-  width: 180px;
-  height: 180px;
-  margin: 0 auto 2rem;
-}
-
-.profile-wrapper img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 2px solid var(--green);
-  object-fit: cover;
-}
-
-.profile-wrapper::before,
-.profile-wrapper::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("img/hax_optimizedv2.gif");
-  background-size: cover;
-  border-radius: 50%;
-  opacity: 0.6;
-  animation: imgGlitch 4s infinite;
-}
-
-.profile-wrapper::after {
-  animation-delay: 2s;
-}
-
-@keyframes imgGlitch {
-  0%,100% { clip-path: inset(0); transform: translate(0); }
-  25% { clip-path: inset(20% 0 40% 0); transform: translate(-3px,2px); }
-  50% { clip-path: inset(40% 0 10% 0); transform: translate(3px,-2px); }
-  75% { clip-path: inset(10% 0 30% 0); transform: translate(-2px,0); }
-}
-
-.glitch {
-  margin: 0.5rem 0;
-  letter-spacing: 1px;
-}
-
-/* Terminal typing */
-.terminal {
-  margin: 1.5rem auto;
-  font-size: 0.9rem;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid var(--green);
-  width: 0;
-  animation: typing 6s steps(40,end) infinite, blink 1s infinite;
-}
-
-@keyframes typing {
-  0% { width: 0; }
-  40% { width: 100%; }
-  80% { width: 100%; }
-  100% { width: 0; }
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-
-/* Code Blocks */
-.code-block {
-  position: relative;
-  margin: 2rem auto;
-  padding: 1rem;
-  border: 1px solid var(--green);
-  background: rgba(0,0,0,0.85);
-  text-align: left;
-  font-size: 0.75rem;
-  line-height: 1.4;
-  overflow-x: auto;
-}
-
-.copy-btn {
-  position: absolute;
-  top: 6px;
-  right: 6px;
-  background: none;
-  border: 1px solid var(--green);
-  color: var(--green);
-  font-family: inherit;
-  font-size: 0.7rem;
-  padding: 4px 6px;
-  cursor: pointer;
-}
-
-.copy-btn:hover {
-  background: var(--green);
-  color: black;
-}
-
-.copy-btn-download {
-  background: none;
-  border: 1px solid var(--green);
-  color: var(--green);
-  font-family: inherit;
-  font-size: 0.7rem;
-  padding: 4px 6px;
-  cursor: pointer;
-}
-
-  .pgp-button {
-	display: inline-block;
-  }
-
-.copy-btn-download:hover {
-  background: var(--green);
-  color: black;
-}
-
-pre {
-  margin: 0;
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alec Davis — Cyber-Security Consultant, Founder &amp; Investor</title>
+  <meta name="description" content="Reformed black-hat turned professional cyber-security consultant, founder, and investor. Red teaming, business, political, software, and non-profit strategy — under NDA and Safe Harbor.">
+  <meta name="keywords" content="Alec Davis, cyber security consultant, red team, ethical hacker for hire, business consultant, political consultant, penetration testing, founder, investor">
+  <link rel="canonical" href="https://alecdavis.com/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Alec Davis">
+  <meta name="theme-color" content="#0000ff">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Alec Davis">
+  <meta property="og:title" content="Alec Davis — Cyber-Security Consultant, Founder &amp; Investor">
+  <meta property="og:description" content="Reformed black-hat turned professional cyber-security consultant, founder, and investor. Red teaming, business, political, software, and non-profit strategy — under NDA and Safe Harbor.">
+  <meta property="og:url" content="https://alecdavis.com/">
+  <meta property="og:image" content="https://alecdavis.com/img/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alec Davis — Cyber-Security Consultant, Founder &amp; Investor">
+  <meta name="twitter:description" content="Reformed black-hat turned professional cyber-security consultant, founder, and investor. Red teaming, business, political, software, and non-profit strategy — under NDA and Safe Harbor.">
+  <meta name="twitter:image" content="https://alecdavis.com/img/og-default.png">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="favicon-180.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" href="fonts/chakra-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/chakra-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/jbmono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script>document.documentElement.className="js";</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Alec Davis","url":"https://alecdavis.com","image":"https://alecdavis.com/img/masked_alec.webp","jobTitle":"Cyber-Security Consultant, Founder & Investor","description":"Reformed black-hat turned professional cyber-security consultant, founder, and investor. Red and blue team operations, corporate and political strategy, and philanthropic structuring \u2014 under NDA and Safe Harbor.","email":"mailto:alec@alecdavis.com","telephone":"+13093002532","knowsAbout":["Red Teaming","Penetration Testing","Zero-Day Research","Corporate Structuring","Political Strategy","Software Architecture","Non-Profit Structuring","Cryptography"],"sameAs":[]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Alec Davis","url":"https://alecdavis.com","image":"https://alecdavis.com/img/og-default.png","description":"Discreet consulting across cyber-security, business, political, software, and non-profit strategy. NDA and Safe Harbor on every engagement.","priceRange":"$$$$","areaServed":"Worldwide","serviceType":["Cyber-Security Consulting","Red Teaming","Business Consulting","Political Consulting","Software Engineering","Non-Profit Consulting"]}</script>
 </head>
-
 <body>
-<div class="container">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html" aria-label="Alec Davis — home">
+        <span class="brand__mark"><img src="img/logo.svg" width="30" height="19" alt="" aria-hidden="true"></span>
+        <span class="brand__name">ALEC<b>DAVIS</b></span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="research.html">Research</a><a href="companies.html">Companies</a><a href="contact.html">Contact</a>
+        <a class="btn btn--solid nav__cta" href="contact.html">Secure Contact</a>
+      </nav>
+      <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-  <div class="profile-wrapper">
-    <img src="img/hax_optimizedv2.gif" alt="Picture of Alec Davis, looking mysterious with a bandana covering his face.">
-  </div>
+  <style>
+  .disc-row{display:grid;grid-template-columns:auto 1fr;gap:1.4rem;padding:2rem 0;border-top:1px solid var(--line);transition:padding .4s var(--ease)}
+  .disc-row:last-child{border-bottom:1px solid var(--line)}
+  .disc-row:hover{padding-left:1rem}
+  .disc-row__i{padding-top:.4rem}
+  .disc-row h3{transition:color .3s}.disc-row:hover h3{color:var(--blue)}
+  .disc-row h3 .arw{display:inline-block;transition:transform .35s var(--ease);color:var(--blue)}
+  .disc-row:hover h3 .arw{transform:translateX(6px)}
+  .disc-row p{max-width:60ch}
+  </style>
 
-  <div class="glitch">HACKER</div>
-  <div class="glitch">BUSINESS CONSULTING</div>
-  <div class="glitch">POLITICAL CONSULTING</div>
-  <div class="glitch">CYBER SECURITY CONSULTING</div>
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero__grid">
+          <div>
+            <div class="eyebrow hero__kicker reveal">Alec Davis &mdash; Security · Strategy · Capital</div>
+            <h1 class="hero__title reveal reveal-d1">
+              <span class="ln">I solve the</span>
+              <span class="ln">problems others</span>
+              <span class="ln blue gtext" data-scramble>can't touch.</span>
+            </h1>
+            <p class="hero__sub reveal reveal-d2">Reformed black-hat turned professional operator. I break systems so they hold, structure companies so they last, and move quietly where the stakes are highest — every engagement under NDA and Safe Harbor.</p>
+            <div class="btn-row reveal reveal-d3">
+              <a class="btn btn--solid" href="contact.html">Secure Contact <span class="arw">&rarr;</span></a>
+              <a class="btn" href="services.html">Capabilities</a>
+            </div>
+          </div>
+          <div class="hero__media reveal reveal-d2">
+            <figure class="glitch" style="--glitch-src:url(img/hax_optimizedv2.webp)">
+              <img class="glitch__img" src="img/hax_optimizedv2.webp" width="320" height="320" alt="Alec Davis, face masked by a bandana" loading="eager" fetchpriority="high">
+              <span class="glitch__scan" aria-hidden="true"></span>
+              <span class="glitch__frame" aria-hidden="true"></span>
+              <figcaption class="glitch__tag">SECURE // ALEC DAVIS</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="stats reveal reveal-d4">
+          <div class="stat"><div class="stat__n">18<span class="blue">+</span></div><div class="stat__l">Years in the field</div></div>
+          <div class="stat"><div class="stat__n">05</div><div class="stat__l">Consulting disciplines</div></div>
+          <div class="stat"><div class="stat__n">06</div><div class="stat__l">Ventures founded</div></div>
+          <div class="stat"><div class="stat__n">100<span class="blue">%</span></div><div class="stat__l">Under NDA &amp; Safe Harbor</div></div>
+        </div>
+      </div>
+    </section>
 
-  <div class="terminal">
-    alec@alecdavis.com // data@alecdavis.com
-  </div>
-	<div class="terminal">
-    // (309)-300-ALEC \\
-  </div>
+    <section class="section">
+      <div class="wrap lead-grid">
+        <div class="reveal">
+          <div class="eyebrow">The Short Version</div>
+          <p class="statement">Former black hat.<br><span class="blue">Full-time asset.</span></p>
+        </div>
+        <div class="reveal reveal-d1 flow">
+          <p>I have been taking things apart since the sixth grade. Two expulsions and one early, unofficial conversation with federal agents later, the obsession never left &mdash; it just found a lawful target.</p>
+          <p>Today I run that same mind for the people who hire me. Red team and blue team. Corporate structure and capital. Campaigns, codebases, and causes. I think like the adversary because I was one, and now I work for you. <a class="link" href="about.html">Read the full story &rarr;</a></p>
+        </div>
+      </div>
+    </section>
 
-  <!-- SIGNED MESSAGE -->
-  <div class="code-block">
-    <button class="copy-btn" onclick="copyText(this)">COPY</button>
-<pre>-----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA512
+    <section class="section--tight">
+      <div class="wrap">
+        <div class="eyebrow reveal">What I Do</div>
+        <h2 class="h-xl reveal reveal-d1" style="margin-bottom:1rem">Five disciplines.<br>One standard of discretion.</h2>
+        <div class="reveal reveal-d1">
+        <a class="disc-row" href="services/cyber/index.html">
+          <div class="disc-row__i"><span class="index-num">01</span></div>
+          <div class="disc-row__m">
+            <h3 class="h-md">Cyber-Security Consulting <span class="arw">&rarr;</span></h3>
+            <p class="muted">Red and blue, under one operator. Adversary emulation that mirrors the people who actually come for you — then the engineering to shut the door behind them. Bug bounties, retained red teams, incident response. Every line of it under Safe Harbor and NDA.</p>
+            <p class="kicker-list" style="margin-top:.6rem">Red Teaming · Zero-Day Vulnerability Research · Advanced Threat Actor Emulation · Cloud Infrastructure · +6 more</p>
+          </div>
+        </a>
+        <a class="disc-row" href="services/business/index.html">
+          <div class="disc-row__i"><span class="index-num">02</span></div>
+          <div class="disc-row__m">
+            <h3 class="h-md">Business Consulting <span class="arw">&rarr;</span></h3>
+            <p class="muted">Structure, capital, and control. From multi-jurisdictional entity formation to turnaround restructuring, I build the architecture a company stands on — and the one it hides its moving parts inside, legally.</p>
+            <p class="kicker-list" style="margin-top:.6rem">Offshore Corporate Structuring · Multi-Jurisdictional Regulatory Licensing · M&amp;A Post-Merger Operational Integration · Corporate Carve-Out Strategy · +8 more</p>
+          </div>
+        </a>
+        <a class="disc-row" href="services/political/index.html">
+          <div class="disc-row__i"><span class="index-num">03</span></div>
+          <div class="disc-row__m">
+            <h3 class="h-md">Political Consulting <span class="arw">&rarr;</span></h3>
+            <p class="muted">Data, narrative, and nerve. Psychographic targeting, opposition intelligence, crisis framing, and mobilization architecture for campaigns and causes that intend to win, not merely to compete.</p>
+            <p class="kicker-list" style="margin-top:.6rem">Psychographic Voter Micro-Targeting · Micro-Targeted Opposition Research · Crisis Containment · Coalition · +7 more</p>
+          </div>
+        </a>
+        <a class="disc-row" href="services/software/index.html">
+          <div class="disc-row__i"><span class="index-num">04</span></div>
+          <div class="disc-row__m">
+            <h3 class="h-md">Software Engineering &amp; Architecture <span class="arw">&rarr;</span></h3>
+            <p class="muted">From protocol prototype to mission-critical production. Polyglot engineering across C, C++, Rust, Go, Python, and Node — distributed systems, custom protocols, and the hard low-level work most teams won't touch.</p>
+            <p class="kicker-list" style="margin-top:.6rem">Full-Stack Product Architecture · Scalable Distributed Systems · Dedicated Enterprise Developer Team Escalation · Polyglot Custom Software Engineering · +6 more</p>
+          </div>
+        </a>
+        <a class="disc-row" href="services/nonprofit/index.html">
+          <div class="disc-row__i"><span class="index-num">05</span></div>
+          <div class="disc-row__m">
+            <h3 class="h-md">Non-Profit &amp; Philanthropic Consulting <span class="arw">&rarr;</span></h3>
+            <p class="muted">Endowments built to outlive their founders. Dual-track (c)(3)/(c)(4) structuring, planned-giving architecture, PAC governance, and the fiduciary discipline that keeps a mission funded for a century.</p>
+            <p class="kicker-list" style="margin-top:.6rem">501(c)(3) · Endowment Capital Preservation · High-Donor Tax Optimization · Cross-Border Philanthropic Routing · +6 more</p>
+          </div>
+        </a></div>
+        <div class="btn-row reveal"><a class="btn" href="services.html">All Capabilities <span class="arw">&rarr;</span></a></div>
+      </div>
+    </section>
 
-MY PGP KEY IS ON THE BOTTOM OF MY WEBSITE. THIS IS MY ONLY PGP KEY. 
-SHOULD I EVER HAVE TO REVOKE & RETIRE MY PGP KEY, I WILL SIGN A MESSAGE BEFORE REVOKING IT WITH MY NEW KEYS FINGERPRINT.
+    <section class="section--tight">
+      <div class="wrap lead-grid">
+        <div class="reveal">
+          <div class="eyebrow">Ventures</div>
+          <h2 class="h-lg">Founder, six companies.</h2>
+          <p class="muted" style="margin-top:1rem">Zero-knowledge vaults, self-defense insurance, AI, privacy infrastructure, and two endowments built to outlive me. Everything I build serves one mission.</p>
+          <div class="btn-row"><a class="btn" href="companies.html">See the Companies <span class="arw">&rarr;</span></a></div>
+        </div>
+        <div class="reveal reveal-d1">
+          <p class="tag-ribbon">
+            <b>DeadFile</b> Zero-knowledge vault &nbsp;
+            <b>Arma</b> Self-defense insurance &nbsp;
+            <b>Cicada</b> Applied AI &nbsp;
+            <b>DankVPN</b> Private networking &nbsp;
+            <b>FreeUSA</b> Advocacy endowment &nbsp;
+            <b>AlecDavis.org</b> Foundation
+          </p>
+        </div>
+      </div>
+    </section>
 
-ONLY OFFICIAL PERSONAL/BUSINESS EMAILS ARE DATA@ALECDAVIS.COM AND ALEC@ALECDAVIS.COM.
-MY OFFICIAL BUSINESS LINE IS (309)-300-ALEC. // CALL OR TEXT ME // DO NOT TALK SENSATIVE INFORMATION OVER THE PHONE OR TEXT.
+    <section class="section" id="secure">
+      <div class="wrap">
+        
+      <div class="eyebrow">Encrypted Channels</div>
+      <p class="muted lede">Both channels below are approved, end-to-end encrypted routes for first contact. No metadata, no middlemen.</p>
+      <div class="secure" style="margin-top:2rem">
+        <div class="channel">
+          <div class="channel__k">Session — App ID</div>
+          <div class="channel__v">
+            <span id="val-session" data-value="05d4a7cb45797a1365f4fab9c66f148ddbd638bb262e2f2848f1251175e21d0f7a" style="flex:1;min-width:0">05d4a7cb45797a1365f4fab9c66f148ddbd638bb262e2f2848f1251175e21d0f7a</span>
+            <button class="copy" data-copy="val-session" aria-label="Copy Session ID"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="1"/><path d="M5 15V5a1 1 0 0 1 1-1h10"/></svg><span class="copy-label">Copy</span></button>
+          </div>
+        </div>
+        <div class="channel">
+          <div class="channel__k">Signal Messenger</div>
+          <div class="channel__v">
+            <span id="val-signal" data-value="HAX.69">HAX.69</span>
+            <button class="copy" data-copy="val-signal" aria-label="Copy Signal username"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="1"/><path d="M5 15V5a1 1 0 0 1 1-1h10"/></svg><span class="copy-label">Copy</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="notice flow" style="margin-top:2.2rem">
+        <p><span class="warn">USE PGP FOR ANYTHING SENSITIVE.</span> If you email me, encrypt it. This matters most on public providers &mdash; <strong>Gmail, Yahoo, Outlook, AOL, Zoho, Mail.com</strong>. Every mail provider can read plaintext sitting on their servers. Unless you run your own mail or encrypt the message, assume it is read. Encrypt the body and attach your public key so I can reply in kind.</p>
+      </div>
+      <div class="alert" style="margin-top:1.6rem">Do not discuss sensitive matters over phone call or SMS. Voice and text are not secure. Move to an encrypted channel first.</div>
 
-BOTH OF THESE BELOW ARE AN APPROVED ENCRYPTED FORM OF COMMUNICATION.
-SESSION APP ID: 05d4a7cb45797a1365f4fab9c66f148ddbd638bb262e2f2848f1251175e21d0f7a
-SIGNAL MESSENGER: HAX.69
+        <div class="hr hr--blue"></div>
+        <div class="lead-grid">
+          <div class="reveal">
+            <div class="eyebrow">Encryption</div>
+            <p class="muted">For anything sensitive, encrypt it. My PGP fingerprint, public key, and signed warrant canary are published and verifiable.</p>
+            <div class="btn-row">
+              <a class="btn" href="contact.html#pgp">PGP Key</a>
+              <a class="btn" href="pgp.txt">/pgp.txt</a>
+              <a class="btn" href="canary.txt">Canary</a>
+            </div>
+          </div>
+          <div class="reveal reveal-d1">
+            <div class="eyebrow">Support / Donate</div>
+            <p class="muted">Prefer to send crypto? Full addresses for Monero, Bitcoin, Ethereum, USDT, and USDC live on the contact page.</p>
+            
+      <details class="crypto">
+        <summary>
+          <span class="ttl">Send Crypto <small>Monero · Bitcoin · Ethereum · USDT · USDC</small></span>
+          <span class="plus" aria-hidden="true"></span>
+        </summary>
+        <div class="coins">
+        <div class="coin">
+          <div class="coin__ic"><svg viewBox="0 0 24 24" fill="none" stroke="#0000ff" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M5 8.4v6.1h2.6V10l4.4 4.4L16.4 10v4.5H19V8.4l-7 7z" fill="#0000ff" stroke="none"/></svg></div>
+          <div class="coin__main">
+            <div class="coin__name">Monero <span>XMR</span></div>
+            
+            <div class="coin__addr">
+              <code id="addr-xmr" data-value="4AVutwaR7Hh5bD5VcCj4DxfDH3azMqYYbJ774KBD7Af4ac5v2JpdW5HWYbpNVfA5eHh6Aw4AzxceY9zjLHyfFqpYMDXSL1c">4AVutwaR7Hh5bD5VcCj4DxfDH3azMqYYbJ774KBD7Af4ac5v2JpdW5HWYbpNVfA5eHh6Aw4AzxceY9zjLHyfFqpYMDXSL1c</code>
+              <button class="copy" data-copy="addr-xmr" aria-label="Copy Monero address"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="1"/><path d="M5 15V5a1 1 0 0 1 1-1h10"/></svg><span class="copy-label">Copy</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="coin">
+          <div class="coin__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.2" fill="none" stroke="#0000ff" stroke-width="1.6"/><text x="12" y="16.4" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" font-weight="700" fill="#0000ff">B</text></svg></div>
+          <div class="coin__main">
+            <div class="coin__name">Bitcoin <span>BTC</span></div>
+            <span class="coin__net">Legacy</span>
+            <div class="coin__addr">
+              <code id="addr-btc1" data-value="19zgJZJVLDMW6sXd7g8brAyCMFPutgN2RW">19zgJZJVLDMW6sXd7g8brAyCMFPutgN2RW</code>
+              <button class="copy" data-copy="addr-btc1" aria-label="Copy Bitcoin address"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="1"/><path d="M5 15V5a1 1 0 0 1 1-1h10"/></svg><span class="copy-label">Copy</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="coin">
+          <div class="coin__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.2" fill="none" stroke="#0000ff" stroke-width="1.6"/><text x="12" y="16.4" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" font-weight="700" fill="#0000ff">B</text></svg></div>
+          <div class="coin__main">
+            <div class="coin__name">Bitcoin <span>BTC</span></div>
+            <span class="coin__net">SegWit (bech32)</span>
+            <div class="coin__addr">
+              <code id="addr-btc2" data-value="bc1qv25cvwcwqcx8a2xd8qx25sp5jgnh2gjuz7kyhe">bc1qv25cvwcwqcx8a2xd8qx25sp5jgnh2gjuz7kyhe</code>
+              <button class="copy" data-copy="addr-btc2" aria-label="Copy Bitcoin address"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="1"/><path d="M5 15V5a1 1 0 0 1 1-1h10"/></svg><span class="copy-label">Copy</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="coin">
+          <div class="coin__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 6 12.2l6 3.5 6-3.5L12 2.5z" fill="none" stroke="#0000ff" stroke-width="1.3" stroke-linejoin="round"/><path d="M6 13.4 12 21l6-7.6-6 3.5-6-3.5z" fill="#0000ff" stroke="none"/></svg></div>
+          <div class="coin__main">
+            <div class="coin__name">Ethereum <span>ETH</span></div>
+            <span class="coin__net">ERC-20 network</span>
+            <div class="coin__addr">
+              <code id="addr-eth" data-value="0x34086Aeea001e03E49bb33bF9a4f367c61e92f82">0x34086Aeea001e03E49bb33bF9a4f367c61e92f82</code>
+              <button class="copy" data-copy="addr-eth" aria-label="Copy Ethereum address"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="1"/><path d="M5 15V5a1 1 0 0 1 1-1h10"/></svg><span class="copy-label">Copy</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="coin">
+          <div class="coin__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.2" fill="none" stroke="#0000ff" stroke-width="1.6"/><path d="M8 8.2h8M12 8.6v8" stroke="#0000ff" stroke-width="1.6" stroke-linecap="round"/><ellipse cx="12" cy="11" rx="4" ry="1.5" fill="none" stroke="#0000ff" stroke-width="1.3"/></svg></div>
+          <div class="coin__main">
+            <div class="coin__name">Tether <span>USDT</span></div>
+            <span class="coin__net">ETH / ERC-20 network</span>
+            <div class="coin__addr">
+              <code id="addr-usdt" data-value="0x34086Aeea001e03E49bb33bF9a4f367c61e92f82">0x34086Aeea001e03E49bb33bF9a4f367c61e92f82</code>
+              <button class="copy" data-copy="addr-usdt" aria-label="Copy Tether address"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="1"/><path d="M5 15V5a1 1 0 0 1 1-1h10"/></svg><span class="copy-label">Copy</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="coin">
+          <div class="coin__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.2" fill="none" stroke="#0000ff" stroke-width="1.6"/><text x="12" y="16" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" font-weight="700" fill="#0000ff">$</text></svg></div>
+          <div class="coin__main">
+            <div class="coin__name">USD Coin <span>USDC</span></div>
+            <span class="coin__net">ETH / ERC-20 network</span>
+            <div class="coin__addr">
+              <code id="addr-usdc" data-value="0x34086Aeea001e03E49bb33bF9a4f367c61e92f82">0x34086Aeea001e03E49bb33bF9a4f367c61e92f82</code>
+              <button class="copy" data-copy="addr-usdc" aria-label="Copy USD Coin address"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="1"/><path d="M5 15V5a1 1 0 0 1 1-1h10"/></svg><span class="copy-label">Copy</span></button>
+            </div>
+          </div>
+        </div>
+          <p class="faint" style="font-size:.78rem;margin-top:1.2rem">Verify the full string before sending. Chain transactions are irreversible. Monero preferred for privacy.</p>
+        </div>
+      </details>
 
-FOR SENSATIVE INFO PLEASE USE PGP WHEN EMAILING ME. 
-(ESPECIALLY IF YOU ARE USING A PUBLIC EMAIL SERVICE "GMAIL, YAHOO, OUTLOOK, AOL".) // ALL EMAIL PROVIDERS CAN READ YOUR EMAILS, UNLESS YOU HAVE A PRIVATE EMAIL SERVER OR YOU USE PGP. // USE PGP! // MAKE SURE YOU ATTACH YOUR PUBLIC PGP KEY TO THE EMAIL.
+          </div>
+        </div>
+      </div>
+    </section>
 
-I ONLY DO LEGAL, ETHICAL HACKING WITH A SAFE HARBOR CONTRACT AND NDA.
-
-ALL OFFICIAL BUSINESS, POLITICAL, AND CYBER SECURITY CONSULTING REQUIRES SIGNED NDA.
-
-THE NUMBER OF SERVICES I CAN PROVIDE IS ENDLESS. 
-NEED HELP WITH SOMETHING? REACH OUT DISCREETLY AND WE CAN FIGURE IT OUT. ALWAYS A SOLUTION TO A PROBLEM.
-
-WOULD LOVE YOUR BUSINESS.
-
-ALEC DAVIS
------BEGIN PGP SIGNATURE-----
-
-iHUEARYKAB0WIQREaXuelwQ5TSyuQuDpSk/4dc6OLAUCaXW27wAKCRDpSk/4dc6O
-LInHAP4ub0Irswtx+kxYZBhqyIuvEoZT9l8Lpj9FHegsSOPaIwD/cux54AoMBQwu
-FffV5R0JwFKwLokMpUdIcQ4Xq/9Ifws=
-=mGHj
------END PGP SIGNATURE-----
-</pre>
-  </div>
-
-  <!-- DOWNLOAD BUTTON -->
-<div style="text-align:center;display: inline-block;">
-    <button class="copy-btn-download" onclick="downloadASC()">
-      DOWNLOAD PUBLIC KEY (.asc)
-    </button>
-	  <div class="pgp-button">
-<div style="text-align:center;">
-    <button class="copy-btn-download" onclick="window.location.href='https://alecdavis.com/2026/'">
-      PGP SIGNED MESSAGES
-    </button>
-  </div>
-</div>
-  </div>
+  <section class="section--tight">
+    <div class="wrap">
+      <p class="legal-strap reveal">I only do <span class="blue">legal, ethical</span> hacking &mdash; under a <span class="blue">Safe Harbor</span> contract and <span class="blue">NDA</span>.</p>
+    </div>
+  </section>
 
 
-</div>
+  <section class="cta reveal">
+    <div class="wrap">
+      <div class="eyebrow eyebrow--plain" style="justify-content:center">Engage</div>
+      <h2 class="gtext">Let's talk — securely.</h2>
+      <p>From five-figure engagements to nine-figure national mandates. Same standard of discretion. Same refusal to lose.</p>
+      <div class="btn-row" style="justify-content:center">
+        <a class="btn btn--solid" href="contact.html">Start a Conversation <span class="arw">&rarr;</span></a>
+        <a class="btn" href="services.html">View Capabilities</a>
+      </div>
+    </div>
+  </section>
 
-<script>
-function copyText(btn) {
-  const pre = btn.nextElementSibling;
-  navigator.clipboard.writeText(pre.innerText);
-  btn.innerText = "COPIED";
-  setTimeout(() => btn.innerText = "COPY", 1500);
-}
-
-function downloadASC() {
-  const ascContent = `-----BEGIN PGP PUBLIC KEY BLOCK-----
-Comment: User ID: Alec Davis <alec@alecdavis.com>
-Comment: Valid from: 1/16/2026 9:06 PM
-Comment: Type: 255-bit EdDSA
-Comment: Usage: Signing, Encryption
-Comment: Fingerprint: 44697B9E9704394D2CAE42E0E94A4FF875CE8E2C
-
-mDMEaWrunRYJKwYBBAHaRw8BAQdAhua/3iXaQjGmQZdjllTa3DFnXYrHUBX9gDaq
-U8sZdTO0H0FsZWMgRGF2aXMgPGFsZWNAYWxlY2RhdmlzLmNvbT6IkwQTFgoAOxYh
-BERpe56XBDlNLK5C4OlKT/h1zo4sBQJpau6dAhsDBQsJCAcCAiICBhUKCQgLAgQW
-AgMBAh4HAheAAAoJEOlKT/h1zo4sayoBALEoiEzZakPJxsddtE7GxAJMJkRxr6zW
-GPQrQKcxS8VpAQDo53Hpjky4Q4DRd1y5tjvEJqAfCVBfHSTbVLp8fKTyArg4BGlq
-7p0SCisGAQQBl1UBBQEBB0AeZzjWXG9szgTHMSGnYn24ADSVnQ2HMwhnGgflD4Be
-cQMBCAeIeAQYFgoAIBYhBERpe56XBDlNLK5C4OlKT/h1zo4sBQJpau6dAhsMAAoJ
-EOlKT/h1zo4s0YMA/Rl5sqoVnrlKc+kq0wRlCg5VsG343TqKGlLtkvTH+pdSAP0b
-3jfMryOzunZdx8G/0xCL5ao7tUIR/GcGFPh5AnUaDA==
-=XDrY
------END PGP PUBLIC KEY BLOCK-----`;
-
-  const blob = new Blob([ascContent], { type: "application/pgp-keys" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "alecdavis_pgpkey.asc";
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
-}
-</script>
-
-
+  </main>
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot__top">
+        <div class="foot__brand">
+          <a class="brand" href="index.html" aria-label="Alec Davis — home">
+            <span class="brand__mark"><img src="img/logo.svg" width="30" height="19" alt="" aria-hidden="true"></span>
+            <span class="brand__name">ALEC<b>DAVIS</b></span>
+          </a>
+          <p>Discreet counsel across security, strategy, and capital. Every engagement under NDA and Safe Harbor. Encrypted contact preferred.</p>
+        </div>
+        <div><h4>Disciplines</h4><ul>
+        <li><a href="services/cyber/index.html">Cyber-Security</a></li>
+        <li><a href="services/business/index.html">Business</a></li>
+        <li><a href="services/political/index.html">Political</a></li>
+        <li><a href="services/software/index.html">Software</a></li>
+        <li><a href="services/nonprofit/index.html">Non-Profit</a></li>
+      </ul></div>
+        <div><h4>Site</h4><ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="companies.html">Companies</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+        <div><h4>Secure</h4><ul>
+        <li><a href="pgp.txt">PGP Public Key</a></li>
+        <li><a href="canary.txt">Warrant Canary</a></li>
+        <li><a href="contact.html#crypto">Crypto / Donate</a></li>
+        <li><a href="mailto:alec@alecdavis.com">alec@alecdavis.com</a></li>
+      </ul></div>
+      </div>
+      <div class="foot__legal">
+        <p>&copy; <span id="yr">2026</span> Alec Davis. All rights reserved.</p>
+        <p class="blue">Legal, ethical engagements only — Safe Harbor &amp; NDA required.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
-
-

@@ -1,0 +1,4 @@
+# Apache / cPanel custom error page.
+# (Ignored by Netlify, Cloudflare Pages, and GitHub Pages — they auto-serve /404.html.
+#  For nginx, use instead:  error_page 404 /404.html;  in the server block.)
+ErrorDocument 404 /404.html

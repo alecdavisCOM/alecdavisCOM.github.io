@@ -1,0 +1,363 @@
+ALEC DAVIS — SEO TARGET KEYWORDS & SEARCH PHRASES
+Generated 2026-11-08. Submit via Google Search Console / Bing Webmaster Tools
+(keywords are informational; ranking comes from the on-page content + sitemap).
+================================================================
+
+# BRAND & HEADLINE
+- Alec Davis
+- Alec Davis hacker
+- Alec Davis consultant
+- reformed black hat hacker
+- ethical hacker for hire
+- hire a hacker legally
+- red team consultant
+- white hat consultant
+- cyber security consultant for hire
+- penetration tester for hire
+- founder investor Alec Davis
+- secure contact PGP consultant
+
+# CYBER-SECURITY CONSULTING
+- red team services
+- adversarial simulation
+- penetration testing
+- red teaming consultant
+- goal-based intrusion
+- physical penetration test
+- zero-day research
+- vulnerability research consultant
+- exploit development
+- bug bounty
+- responsible disclosure
+- security research for hire
+- APT emulation
+- threat actor emulation
+- adversary emulation
+- MITRE ATT&CK
+- threat intelligence led testing
+- nation-state simulation
+- kubernetes security
+- cloud security consultant
+- AWS GCP Azure hardening
+- container security
+- IAM review
+- cloud attack path
+- SCADA security
+- ICS security consultant
+- OT security
+- industrial control systems
+- IT OT segmentation
+- Purdue model
+- critical infrastructure defense
+- ransomware incident response
+- cyber extortion
+- ransomware recovery
+- breach response consultant
+- digital forensics
+- ransomware negotiation
+- firmware reverse engineering
+- embedded security
+- IoT security consultant
+- hardware hacking
+- firmware analysis
+- JTAG UART extraction
+- cryptography audit
+- cryptographic review
+- protocol security
+- key management audit
+- side channel analysis
+- applied cryptography consultant
+- social engineering assessment
+- phishing test
+- insider threat program
+- vishing
+- pretext testing
+- physical security test
+- human risk
+- cyber due diligence
+- M&A security assessment
+- acquisition security review
+- technical due diligence
+- breach risk
+- deal security
+
+# BUSINESS CONSULTING
+- offshore company formation
+- international entity structuring
+- holding company structure
+- multi-jurisdictional corporate structure
+- offshore incorporation consultant
+- regulatory licensing
+- compliance consultant
+- multi-jurisdictional licensing
+- financial licensing
+- regulatory strategy
+- cross-border compliance
+- post-merger integration
+- PMI consultant
+- M&A integration
+- operational integration
+- synergy capture
+- merger integration management
+- corporate carve-out
+- divestiture consultant
+- business separation
+- standalone operating model
+- carve-out strategy
+- divestiture
+- capital structure optimization
+- cost of capital
+- debt equity mix
+- corporate finance consultant
+- recapitalization
+- balance sheet strategy
+- unit economics
+- cohort analysis
+- CAC LTV
+- contribution margin
+- profitability analysis
+- unit economics consultant
+- supply chain resilience
+- cross-border supply chain
+- supply chain risk
+- nearshoring
+- supplier diversification
+- supply chain consultant
+- zero-based budgeting
+- ZBB
+- cost optimization
+- cost transformation
+- budgeting consultant
+- cost management
+- turnaround consultant
+- distressed restructuring
+- crisis management
+- cash management
+- debt restructuring
+- business turnaround
+- executive succession planning
+- corporate governance
+- board advisory
+- leadership transition
+- founder transition
+- governance consultant
+- grey area corporate structuring
+- novel business structures
+- emerging sector formation
+- crypto company structure
+- regulatory grey area
+- complex corporate structuring
+- offshore licensing
+- regulated entity formation
+- unregulated company
+- offshore license consultant
+- international business license
+- jurisdiction selection
+
+# POLITICAL CONSULTING
+- psychographic targeting
+- voter micro-targeting
+- political data analytics
+- voter segmentation
+- persuasion modeling
+- campaign targeting
+- opposition research
+- political counter-intelligence
+- vulnerability study
+- self-research
+- campaign research
+- oppo research consultant
+- crisis communications
+- narrative framing
+- political crisis management
+- rapid response
+- reputation defense
+- message control
+- coalition mapping
+- stakeholder mapping
+- special interest analysis
+- power mapping
+- political strategy
+- influence mapping
+- predictive electorate modeling
+- dynamic polling
+- election forecasting
+- political modeling
+- voter turnout model
+- campaign analytics
+- legislative strategy
+- regulatory lobbying
+- government affairs
+- policy advocacy
+- rulemaking strategy
+- legislative consultant
+- geofencing campaign
+- geo-targeted advertising
+- digital mobilization
+- location-based political ads
+- digital campaign strategy
+- geofenced targeting
+- grassroots mobilization
+- grassroots organizing
+- field program
+- volunteer infrastructure
+- mobilization strategy
+- advocacy campaign
+- political risk analysis
+- sovereign risk
+- country risk
+- political risk consultant
+- geopolitical risk
+- expropriation risk
+- debate preparation
+- media training
+- interview preparation
+- candidate prep
+- political communications coaching
+- debate consultant
+- political positioning
+- campaign strategy
+- contrast framing
+- opponent positioning
+- message strategy
+- political strategist
+
+# SOFTWARE ENGINEERING & ARCHITECTURE
+- product architecture
+- rapid prototyping
+- full-stack architecture
+- MVP development
+- technical architecture consultant
+- protocol prototyping
+- distributed systems
+- microservices architecture
+- high throughput
+- scalable systems
+- system design consultant
+- high performance backend
+- dedicated development team
+- engineering capacity
+- developer pods
+- team augmentation
+- engineering escalation
+- enterprise development
+- polyglot programming
+- custom software development
+- Rust Go C++ Python Node
+- systems programming
+- custom software engineer
+- multi-language development
+- API development
+- SDK development
+- protocol design
+- decentralized protocol
+- API design consultant
+- developer platform
+- kernel development
+- firmware optimization
+- embedded systems
+- low-level programming
+- performance optimization
+- systems engineering
+- legacy modernization
+- system refactoring
+- legacy migration
+- technical debt
+- code modernization
+- legacy system consultant
+- ML infrastructure
+- edge inference
+- model deployment
+- MLOps
+- machine learning engineering
+- edge AI deployment
+- DevOps consultant
+- CI/CD pipeline
+- cloud-native
+- infrastructure as code
+- deployment automation
+- GitOps
+- software project rescue
+- turnaround engineering
+- failing project recovery
+- mission-critical systems
+- software rescue consultant
+- troubled project
+
+# NON-PROFIT & PHILANTHROPIC CONSULTING
+- 501c3 501c4 structuring
+- nonprofit formation
+- dual track nonprofit
+- advocacy organization
+- charitable advocacy structure
+- nonprofit consultant
+- endowment management
+- investment policy statement
+- capital preservation
+- endowment spending policy
+- perpetual endowment
+- nonprofit investment
+- planned giving
+- charitable tax planning
+- major donor strategy
+- charitable remainder trust
+- appreciated asset gifts
+- planned giving consultant
+- cross-border philanthropy
+- international grantmaking
+- foreign charity compliance
+- equivalency determination
+- expenditure responsibility
+- global giving
+- major gifts campaign
+- capital campaign
+- grassroots fundraising
+- donor pipeline
+- fundraising strategy
+- nonprofit development
+- impact measurement
+- nonprofit metrics
+- outcome measurement
+- impact reporting
+- theory of change
+- impact analytics
+- PAC governance
+- super PAC
+- hybrid PAC
+- political committee compliance
+- campaign finance
+- FEC compliance
+- nonprofit asset protection
+- board fiduciary duty
+- nonprofit governance
+- fiduciary advisory
+- board risk
+- nonprofit controls
+- nonprofit crisis PR
+- reputation management
+- public trust
+- crisis communications
+- donor confidence
+- nonprofit reputation defense
+- nonprofit turnaround
+- distressed nonprofit
+- nonprofit restructuring
+- nonprofit financial crisis
+- organizational restructuring
+- mission rescue
+
+# LONG-TAIL / INTENT
+- hire red team under safe harbor
+- zero day research under NDA
+- offshore company structuring consultant
+- post merger integration consultant
+- psychographic voter targeting firm
+- opposition research consultant
+- 501c3 501c4 dual structure consultant
+- endowment investment policy consultant
+- ransomware incident response 24/7
+- ICS SCADA security consultant
+- distributed systems architecture consultant
+- turnaround restructuring consultant
+- PGP encrypted security consultant
+- accept crypto consultant Monero Bitcoin

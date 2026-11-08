@@ -3,7 +3,7 @@ Comment: User ID:	Alec Davis <alec@alecdavis.com>
 Comment: Valid from:	1/16/2026 9:06 PM
 Comment: Type:	255-bit EdDSA (secret key available)
 Comment: Usage:	Signing, Encryption, Certifying User IDs
-Comment: Fingerprint:	44697B9E9704394D2CAE42E0E94A4FF875CE8E2C
+Comment: Fingerprint:	4469 7B9E 9704 394D 2CAE  42E0 E94A 4FF8 75CE 8E2C
 
 
 mDMEaWrunRYJKwYBBAHaRw8BAQdAhua/3iXaQjGmQZdjllTa3DFnXYrHUBX9gDaq
