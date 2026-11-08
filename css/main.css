@@ -248,6 +248,11 @@ body.menu-open .nav__toggle span:nth-child(3){transform:translateY(-6px) rotate(
   body.scrolled .scroll-cue{opacity:0;transform:translateY(-8px);pointer-events:none}
 }
 @media (prefers-reduced-motion:reduce){.scroll-cue svg{animation:none}.scroll-cue{transition:none}}
+/* services hero: fill the viewport on mobile so the cue sits near the bottom */
+@media (max-width:900px){
+  .svc-hero .wrap{display:flex;flex-direction:column;min-height:calc(100vh - 66px - 2 * var(--section-y));min-height:calc(100dvh - 66px - 2 * var(--section-y))}
+  .svc-hero .scroll-cue{margin-top:auto}
+}
 
 /* ---------- glitch image (blue-hued, crisp, no glow) ---------- */
 .glitch{position:relative;overflow:hidden;background:#000;isolation:isolate}
