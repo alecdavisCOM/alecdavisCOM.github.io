@@ -30,6 +30,7 @@
     var onScroll = function () {
       if (window.scrollY > 10) nav.style.borderBottomColor = "rgba(0,0,255,.55)";
       else nav.style.borderBottomColor = "";
+      document.body.classList.toggle("scrolled", window.scrollY > 24);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
