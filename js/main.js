@@ -39,11 +39,12 @@
   /* ---------- reveal on scroll ---------- */
   var reveals = document.querySelectorAll(".reveal");
   if (reveals.length && "IntersectionObserver" in window && !reduce) {
+    var mob = window.matchMedia("(max-width: 900px)").matches;
     var ro = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) { e.target.classList.add("is-visible"); ro.unobserve(e.target); }
       });
-    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    }, { threshold: mob ? 0 : 0.12, rootMargin: mob ? "0px 0px -4% 0px" : "0px 0px -8% 0px" });
     reveals.forEach(function (el) { ro.observe(el); });
   } else {
     reveals.forEach(function (el) { el.classList.add("is-visible"); });
