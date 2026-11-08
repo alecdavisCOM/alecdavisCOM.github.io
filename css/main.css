@@ -243,7 +243,7 @@ body.menu-open .nav__toggle span:nth-child(3){transform:translateY(-6px) rotate(
 .scroll-cue{display:none}
 @keyframes scroll-cue-blink{0%,100%{opacity:1;transform:translateY(0)}50%{opacity:.28;transform:translateY(6px)}}
 @media (max-width:900px){
-  .scroll-cue{display:flex;align-items:center;justify-content:center;width:46px;height:48px;margin-top:1.6rem;color:var(--blue)}
+  .scroll-cue{display:flex;align-items:center;justify-content:center;width:46px;height:48px;margin:1.6rem auto 0;color:var(--blue)}
   .scroll-cue svg{width:24px;height:34px;animation:scroll-cue-blink 1.7s ease-in-out infinite}
 }
 @media (prefers-reduced-motion:reduce){.scroll-cue svg{animation:none}}
