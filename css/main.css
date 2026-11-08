@@ -456,6 +456,7 @@ body.menu-open .nav__toggle span:nth-child(3){transform:translateY(-6px) rotate(
 .legal-strap{
   font-family:var(--mono);font-size:clamp(.78rem,1.4vw,.95rem);letter-spacing:.14em;
   text-transform:uppercase;color:var(--white);text-align:center;line-height:1.8;
+  max-width:min(68ch,100%);margin-inline:auto;
 }
 .legal-strap .blue{color:var(--blue)}
 
